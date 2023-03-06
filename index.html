@@ -70,24 +70,15 @@
   <div id="map"></div>
   <table id="maptable" class="display"></table>
 
- <script type="text/javascript">
-    var mapExtent = [-74.30350979, 40.57423192, -74.21563959, 40.64095794];
-    var mapMinZoom = 11;
-    var mapMaxZoom = 17;
-    var bounds = new L.LatLngBounds(
-      new L.LatLng(mapExtent[1], mapExtent[0]),
-      new L.LatLng(mapExtent[3], mapExtent[2]));
-    var map = L.map('map').fitBounds(bounds);
-    var layer;
-    var options = {
-      minZoom: mapMinZoom,
-      maxZoom: mapMaxZoom,
-      opacity: 1.0,
-      attribution: '<a href="https://www.maptiler.com/engine/">Rendered with MapTiler Engine</a>, non-commercial use only',
-      tms: false
-    };
+  <script type="text/javascript">
+    var map = L.map('map', {
+      attributionControl: false,
+      zoomControl: false,
+      scrollWheelZoom: true,
+      tap: false
+    }).setView([41.76,-72.69], 11); // default center is overridden by Google Sheet options and points
+
     layer = L.tileLayer('Maps/{z}/{x}/{y}.png', options).addTo(map);
-    map.setZoom(12);
 
   </script>
 
