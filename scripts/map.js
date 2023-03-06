@@ -927,7 +927,8 @@ $(window).on('load', function() {
    */
   function addBaseMap() {
     var layer = L.tileLayer('Maps/{z}/{x}/{y}.png', options).addTo(map);
-
+  }
+  
   /**
    * Returns the value of a setting s
    * getSetting(s) is equivalent to documentSettings[constants.s]
