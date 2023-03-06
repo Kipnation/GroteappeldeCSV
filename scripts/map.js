@@ -926,7 +926,7 @@ $(window).on('load', function() {
    * Loads the basemap and adds it to the map
    */
   function addBaseMap() {
-    var layer = L.tileLayer('Maps/{z}/{x}/{y}.png', options).addTo(map);
+    var basemap = L.tileLayer('Maps/{z}/{x}/{y}.png', options).addTo(map);
   }
   
   /**
