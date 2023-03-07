@@ -926,10 +926,8 @@ $(window).on('load', function() {
    * Loads the basemap and adds it to the map
    */
   function addBaseMap() {
-    var basemap = trySetting('_tileProvider', 'CartoDB.Positron');
-    L.tileLayer.provider(basemap, {
-      maxZoom: 18
-    }).addTo(map);
+    var basemap = trySetting();
+    L.tileLayer('Maps/{z}/{x}/{y}.png').addTo(map);
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
     }).addTo(map);

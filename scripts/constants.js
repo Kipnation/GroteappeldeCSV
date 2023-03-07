@@ -16,7 +16,6 @@ var constants = {
 	_githubRepo: 'Author Code Repo',
 	_googleAnalytics: 'Google Analytics Tracking ID',
 	// Map Settings
-	_tileProvider: 'Basemap Tiles',
 	_markercluster: 'Cluster Markers',
   _introPopupText: 'Intro Popup Text',
   _initZoom: 'Initial Zoom',
