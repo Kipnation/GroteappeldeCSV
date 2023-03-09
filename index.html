@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="icon" type="image/png" href="Threefold-Symbol.png">
 
   <title>Loading the map...</title>
 
@@ -25,9 +25,6 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/js/fontawesome.min.js"></script>
-
-  <!-- leaflet-providers-->
-  <script src="https://unpkg.com/leaflet-providers@1.10.2/leaflet-providers.js"></script>
 
   <!-- Leaflet.awesome-markers v2.0.4, manually updated to svg to allow hex and material icons -->
   <link rel="stylesheet" type="text/css" href="scripts/Leaflet.awesome-markers/dist/leaflet.awesome-markers.css">
@@ -78,6 +75,7 @@
 
   <script type="text/javascript">
     var map = L.map('map', {
+      maxBounds: L.latLngBounds([[40.463919, -74.346636],[40.967009, -73.694863]]).pad(0),
       attributionControl: false,
       zoomControl: false,
       scrollWheelZoom: true,

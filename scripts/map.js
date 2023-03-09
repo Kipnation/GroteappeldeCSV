@@ -927,7 +927,10 @@ $(window).on('load', function() {
    */
   function addBaseMap() {
     var basemap = trySetting();
-    L.tileLayer('Maps/{z}/{x}/{y}.png').addTo(map);
+    L.tileLayer('Maps/{z}/{x}/{y}.png', {
+      minZoom: 11,
+      maxZoom: 16,
+    }).addTo(map);
     L.control.attribution({
       position: trySetting('_mapAttribution', 'bottomright')
     }).addTo(map);
