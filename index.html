@@ -59,12 +59,25 @@
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <!-- Fullscreen Control -->
+  <link href='scripts/leaflet.fullscreen.css' rel='stylesheet' />
+  <script src='scripts/Leaflet.fullscreen.min.js'></script>
+
 </head>
 
 <body>
 
   <div class="loader">Loading...</div>
   <div id="map"></div>
+  <div class='limiter'>
+    <div class='col10 margin1 pad4y'>
+      <h1>Leaflet.fullscreen</h1>
+      <p>A HTML5 fullscreen plugin for Leaflet.</p>
+      <div class='space-bottom'>
+        <div id='map' class='col12 row10'></div>
+      </div>
+    </div>
+  </div>
   <table id="maptable" class="display"></table>
 
   <script type="text/javascript" src="./google-doc-url.js"></script>
@@ -75,10 +88,11 @@
 
   <script type="text/javascript">
     var map = L.map('map', {
-      maxBounds: L.latLngBounds([[40.463919, -74.346636],[40.967009, -73.694863]]).pad(0),
+      maxBounds: L.latLngBounds([[40.473069, -74.357529],[40.965900, -73.703842]]).pad(0),
       attributionControl: false,
       zoomControl: false,
       scrollWheelZoom: true,
+      fullscreenControl: true,
       tap: false
     }).setView([41.76,-72.69], 11); // default center is overridden by Google Sheet options and points
 
